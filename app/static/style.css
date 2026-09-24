@@ -1,0 +1,251 @@
+```css
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #5441ff,
+        #6525a5,
+        #ea35fe
+    );
+
+    color: #ffffff;
+}
+
+/* Main Container */
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 60px 30px;
+    text-align: center;
+}
+
+/* Main Heading */
+h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+
+    text-shadow:
+        2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.container > p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+/* Application Status Card */
+.card {
+    margin: 30px auto;
+    padding: 25px;
+
+    max-width: 600px;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 28px;
+}
+
+.card p {
+    font-size: 22px;
+}
+
+/* Healthy Status */
+.card strong {
+    color: #00ff15;
+
+    text-shadow:
+        0 0 8px rgba(0, 255, 21, 0.5);
+}
+
+/* AWS Service Information */
+.aws-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    margin: 25px auto;
+
+    max-width: 700px;
+}
+
+.aws-box {
+    min-width: 140px;
+
+    padding: 18px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    border-radius: 15px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.2);
+
+    transition: all 0.3s ease;
+}
+
+.aws-box:hover {
+    transform: translateY(-5px);
+
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.aws-box h3 {
+    margin: 0 0 8px;
+
+    font-size: 18px;
+}
+
+.aws-box p {
+    margin: 0;
+
+    font-size: 15px;
+
+    opacity: 0.9;
+}
+
+/* Button */
+button {
+    padding: 15px 35px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #f96a22,
+        #ff5e62
+    );
+
+    border: none;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-4px) scale(1.03);
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.35);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* API Result */
+#result {
+    margin: 30px auto 0;
+
+    padding: 15px;
+
+    max-width: 600px;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    border-radius: 15px;
+
+    font-size: 17px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.2);
+
+    word-wrap: break-word;
+}
+
+/* Footer */
+.footer {
+    margin-top: 45px;
+
+    font-size: 14px;
+
+    opacity: 0.8;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+
+    .container {
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .container > p {
+        font-size: 17px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .card h2 {
+        font-size: 24px;
+    }
+
+    .card p {
+        font-size: 20px;
+    }
+
+    .aws-info {
+        flex-direction: column;
+    }
+
+    .aws-box {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    #result {
+        font-size: 15px;
+    }
+}
+```

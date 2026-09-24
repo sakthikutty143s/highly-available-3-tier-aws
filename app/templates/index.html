@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AWS Highly Available 3-Tier Web Application</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Main Heading -->
+    <h1>AWS Highly Available 3-Tier Web Application</h1>
+
+    <p>
+        Python Flask Application Deployed on AWS Cloud
+    </p>
+
+
+    <!-- Application Status -->
+    <div class="card">
+
+        <h2>Application Status</h2>
+
+        <p>
+            Application:
+            <strong>Healthy</strong>
+        </p>
+
+        <p>
+            Server:
+            <strong>{{ hostname }}</strong>
+        </p>
+
+        <p>
+            Environment:
+            <strong>AWS EC2</strong>
+        </p>
+
+    </div>
+
+
+    <!-- AWS Architecture Services -->
+    <div class="aws-info">
+
+        <div class="aws-box">
+            <h3>EC2</h3>
+            <p>Application Server</p>
+        </div>
+
+        <div class="aws-box">
+            <h3>ALB</h3>
+            <p>Load Balancer</p>
+        </div>
+
+        <div class="aws-box">
+            <h3>RDS</h3>
+            <p>MySQL Database</p>
+        </div>
+
+        <div class="aws-box">
+            <h3>S3</h3>
+            <p>Object Storage</p>
+        </div>
+
+        <div class="aws-box">
+            <h3>CloudFront</h3>
+            <p>Content Delivery</p>
+        </div>
+
+        <div class="aws-box">
+            <h3>Route 53</h3>
+            <p>DNS Service</p>
+        </div>
+
+    </div>
+
+
+    <!-- API Button -->
+    <button onclick="callAPI()">
+        Call API
+    </button>
+
+
+    <!-- API Response -->
+    <div id="result"></div>
+
+
+    <!-- Footer -->
+    <div class="footer">
+
+        <p>
+            AWS 3-Tier Architecture |
+            Flask |
+            EC2 |
+            RDS |
+            S3
+        </p>
+
+        <p>
+            &copy; 2026 Sakthivel. All rights reserved.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- JavaScript -->
+<script>
+
+async function callAPI() {
+
+    try {
+
+        const response = await fetch("/api/hello");
+
+        const data = await response.json();
+
+        document.getElementById("result").innerHTML = `
+            <p>
+                <strong>API Response:</strong>
+                ${data.message}
+            </p>
+
+            <p>
+                Status:
+                <strong>${data.status}</strong>
+            </p>
+
+            <p>
+                Server:
+                <strong>${data.hostname}</strong>
+            </p>
+        `;
+
+    } catch (error) {
+
+        document.getElementById("result").innerHTML = `
+            <p>
+                <strong>API Error:</strong>
+                Unable to connect to the server.
+            </p>
+        `;
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>
+```

@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+*.env
+
+# AWS credentials
+.aws/
+credentials
+config
+
+# AWS private keys
+*.pem
+*.key
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Local database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Certificates and private keys
+*.crt
+*.cer
+*.p12
+*.pfx
+
+# Terraform state, if added later
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# Docker
+docker-compose.override.yml
+
+# ZIP archives
+*.zip
+
+# Application secrets
+secrets/
+secret/
+*.secret
